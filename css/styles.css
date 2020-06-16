@@ -1,0 +1,19 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: lightgrey;
+}
+body .pathfinder-grid {
+  background-color: white;
+}
+body .pathfinder-grid .row,
+body .pathfinder-grid .col {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  border: 1px solid lightgrey;
+}
+
+/*# sourceMappingURL=styles.css.map */
