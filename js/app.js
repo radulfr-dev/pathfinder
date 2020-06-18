@@ -77,8 +77,54 @@
             trackNewSquare(pathfinderGrid, hoveredSq, "end");
 
         }else{
-            alert("There has been an error! Please refresh the browser and try again!");
+            /* alert("There has been an error! Please refresh the browser and try again!"); */
         }
+
+        switch(hoveredSq.getAttribute("data-type")){
+
+            case "start":
+                trackNewSquare(pathfinderGrid, hoveredSq, "start");
+                break;
+
+            case "end":
+                trackNewSquare(pathfinderGrid, hoveredSq, "end");
+                break;
+
+            case "blank":
+
+                // Start making walls
+
+                hoveredSq.setAttribute('data-type', "wall");
+                hoveredSq.classList.toggle('wall');
+
+                break;
+
+            case "wall":
+                
+                break;
+
+            default:
+
+                break;
+
+        }
+
+
+    });
+
+    // The below is a quick and nasty way to make walls for testing with
+
+    pathfinderGrid.addEventListener('click', function(e){
+
+        let selectedSquare = e.target;
+
+        if(selectedSquare.getAttribute("data-type") == "blank"){
+
+            hoveredSq.setAttribute('data-type', "wall");
+            hoveredSq.classList.toggle('wall');
+
+        }
+
     });
 
     function trackHoveredSquares(event){
