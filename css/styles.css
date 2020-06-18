@@ -15,5 +15,8 @@ body .pathfinder-grid .col {
   margin: 0px;
   border: 1px solid lightgrey;
 }
+body .pathfinder-grid .active {
+  background-color: purple;
+}
 
 /*# sourceMappingURL=styles.css.map */
