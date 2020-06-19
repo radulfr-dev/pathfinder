@@ -341,11 +341,13 @@
 
             }
 
+            thisSquare.setAttribute('data-type', 'inactive');
+
             if(activeSquares.length > 0){
                 delayedLoop();
             }
 
-        }, 5);
+        }, 1);
 
     }
   

@@ -18,6 +18,9 @@ body .pathfinder-grid .col {
 body .pathfinder-grid .active {
   background-color: purple;
 }
+body .pathfinder-grid .inactive {
+  background-color: darkslateblue;
+}
 body .pathfinder-grid .wall {
   background-color: grey;
 }
